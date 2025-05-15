@@ -99,17 +99,11 @@ int main()
 
     Task_List task_list = task_create(4);
 
-    task_push(&task_list, (Task) {
-        .name = "Task 1",
-        .starting_date = &starting_date,
-        .ending_date = &end_date,
-        .starting_time = &starting_time,
-        .ending_time = &ending_time,
-        .status = false
-    });
+    char name[1024];
+    scanf("%s", name);
 
     task_push(&task_list, (Task) {
-        .name = "Task 1",
+        .name = name,
         .starting_date = &starting_date,
         .ending_date = &end_date,
         .starting_time = &starting_time,
